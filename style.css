@@ -1,5 +1,57 @@
-body {
+:root {
+    font-family: “Julee”, cursive;
+    font-style: normal;
+    }
+    
+    /* Background */
+    #css-zen-garden {
     background-image: url(/imgs/vaporwave-water-hd-wallpaper-preview.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
-}
+    background-repeat: no-repeat;
+    }
+    
+    /* Don’t edit the above. */
+    
+    /* Boxes */
+    .intro, .benefits, .participation, .requirements, .sidebar, .explanation {
+    background: linear-gradient(90deg, #4B93B4 0%, #4B65B4 33%, #6A5F79 56%, #A5919D 100%);
+    width: 45%;
+    flex-direction: column;
+    transition-duration: 1s;
+    transition-delay: 0ms;
+    transition-timing-function: ease;
+    }
+    
+    /* Hover */
+    .intro:hover, .benefits:hover, .participation:hover, .requirements:hover, .sidebar:hover, .explanation:hover {
+    background: linear-gradient(90deg, #A95167 0%, #66A384 33%, #BAA6AF 56%, #6D6285 100%);
+    transform: translateX(10em);
+    }
+    
+    /* Centering Headers */
+    .intro > header > h1 {
+    text-align: center
+    }
+    .benefits > h3 {
+    text-align: center
+    }
+    .explanation > h3 {
+    text-align: center
+    }
+    .participation > h3 {
+    text-align: center
+    }
+    .requirements > h3 {
+    text-align: center
+    }
+    
+    /* idk */
+    .sidebar {
+    transform: translate(65em);
+    direction: rtl;
+    }
+    .sidebar:hover {
+    background: linear-gradient(90deg, #A95167 0%, #66A384 33%, #BAA6AF 56%, #6D6285 100%);
+    transform: translateX(55em);
+    }
+    /* Logos */
