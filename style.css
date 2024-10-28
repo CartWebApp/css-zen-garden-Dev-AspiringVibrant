@@ -1,31 +1,56 @@
 :root {
-    font-family: “Julee”, cursive;
-    font-style: normal;
+    font-family: "Oxanium", sans-serif;
     }
     
     /* Background */
     #css-zen-garden {
-    background-image: url(/imgs/vaporwave-water-hd-wallpaper-preview.jpg);
+    background-image: url(/imgs/space-theme.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     }
-    
     /* Don’t edit the above. */
     
     /* Boxes */
-    .intro, .benefits, .participation, .requirements, .sidebar, .explanation {
+    .intro, .benefits, .participation, .requirements, .sidebar, .explanation, .sidebar {
     background: linear-gradient(90deg, #4B93B4 0%, #4B65B4 33%, #6A5F79 56%, #A5919D 100%);
-    width: 45%;
     flex-direction: column;
     transition-duration: 1s;
     transition-delay: 0ms;
     transition-timing-function: ease;
     }
-    
+    .page-wrapper {
+    background: linear-gradient(90deg, #4B93B4 0%, #4B65B4 33%, #6A5F79 56%, #A5919D 100%);
+    width: 45%;
+    background-color: black;
+    }
+    #design-archives {
+    float: right;
+    direction: rtl;
+    transform: translateY(-5em);
+    }
+
     /* Hover */
     .intro:hover, .benefits:hover, .participation:hover, .requirements:hover, .sidebar:hover, .explanation:hover {
     background: linear-gradient(90deg, #A95167 0%, #66A384 33%, #BAA6AF 56%, #6D6285 100%);
     transform: translateX(10em);
+    }
+    a:focus {
+        background-color: white;
+    }
+    a:active {
+        background-color: rgb(97, 179, 97);
+    }
+    a:link {
+        color: aqua;
+        padding: 0.1em;
+        border-radius: 0.3em;
+    }
+    a:visited {
+        color: magenta;
+    }
+    ::selection {
+        color: silver;
+        background: maroon;
     }
     
     /* Centering Headers */
@@ -45,13 +70,4 @@
     text-align: center
     }
     
-    /* idk */
-    .sidebar {
-    transform: translate(65em);
-    direction: rtl;
-    }
-    .sidebar:hover {
-    background: linear-gradient(90deg, #A95167 0%, #66A384 33%, #BAA6AF 56%, #6D6285 100%);
-    transform: translateX(55em);
-    }
     /* Logos */
