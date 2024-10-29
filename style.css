@@ -1,4 +1,7 @@
 :root {
+    background: linear-gradient(90deg, navy 0%, blue 50%, purple 100%);
+}
+    * {
     font-family: "Oxanium", sans-serif;
     }
     
@@ -11,15 +14,26 @@
     /* Don’t edit the above. */
     
     /* Boxes */
-    .intro, .benefits, .participation, .requirements, .sidebar, .explanation, .sidebar {
+    .intro, .benefits, .participation, .requirements, .explanation {
     background: linear-gradient(90deg, #4B93B4 0%, #4B65B4 33%, #6A5F79 56%, #A5919D 100%);
     flex-direction: column;
-    transition-duration: 1s;
+    border-radius: 2em;
+    transition-duration: 250ms;
+    transition-delay: 0ms;
+    transition-timing-function: ease;
+    text-align: center;
+    }
+    .sidebar {
+    background: linear-gradient(90deg, #4B93B4 0%, #4B65B4 33%, #6A5F79 56%, #A5919D 100%);
+    flex-direction: column;
+    border-radius: 2em;
+    transition-duration: 250ms;
     transition-delay: 0ms;
     transition-timing-function: ease;
     }
     .page-wrapper {
     background: linear-gradient(90deg, #4B93B4 0%, #4B65B4 33%, #6A5F79 56%, #A5919D 100%);
+    border-radius: 1em;
     width: 45%;
     background-color: black;
     }
@@ -28,11 +42,20 @@
     direction: rtl;
     transform: translateY(-5em);
     }
+    .intro::after, .benefits::after, .participation::after, .requirements::after, .explanation::after {
+    content: url(/imgs/Earth\ rotato.gif);
+    display: flex;
+    justify-content: center;
+    scale: 80%;
+    }
+    .intro::before, .benefits::before, .participation::before, .requirements::before, .explanation::before {
+    background: white;
+    }
 
     /* Hover */
     .intro:hover, .benefits:hover, .participation:hover, .requirements:hover, .sidebar:hover, .explanation:hover {
-    background: linear-gradient(90deg, #A95167 0%, #66A384 33%, #BAA6AF 56%, #6D6285 100%);
-    transform: translateX(10em);
+    background: linear-gradient(90deg, #4B93B4, #A95167 0.3%, #66A384 33%, #BAA6AF 56%, #6D6285 100%);
+    transform: translateX(1em);
     }
     a:focus {
         background-color: white;
@@ -70,4 +93,8 @@
     text-align: center
     }
     
+    /* Texts */
+    p {
+        text-align: center;
+    }
     /* Logos */
