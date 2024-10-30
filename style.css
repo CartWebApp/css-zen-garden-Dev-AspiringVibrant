@@ -1,16 +1,19 @@
 :root {
-    background: linear-gradient(90deg, navy 0%, blue 50%, purple 100%);
+    background: linear-gradient(90deg, black 0%, navy 50%, cyan 100%);
 }
     * {
     font-family: "Oxanium", sans-serif;
     }
+    *:empty {
+        background-color: red;
+    }
     
     /* Background */
-    #css-zen-garden {
-    background-image: url(/imgs/space-theme.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    }
+    /* #css-zen-garden { */
+    /* background-image: url(/imgs/space-theme.jpg); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* } */
     /* Don’t edit the above. */
     
     /* Boxes */
@@ -43,13 +46,13 @@
     transform: translateY(-5em);
     }
     .intro::after, .benefits::after, .participation::after, .requirements::after, .explanation::after {
-    content: url(/imgs/Earth\ rotato.gif);
+    content: url(/imgs/Earth-rotate.gif);
     display: flex;
     justify-content: center;
     scale: 80%;
     }
     .intro::before, .benefits::before, .participation::before, .requirements::before, .explanation::before {
-    background: white;
+    content: url(/imgs/moon-spin-gif.gif);
     }
 
     /* Hover */
@@ -95,6 +98,38 @@
     
     /* Texts */
     p {
-        text-align: center;
+    text-align: left;
+    }
+    p::first-letter {
+        font-size: 200%;
+    }
+    p::first-line {
+        text-decoration: underline;
     }
     /* Logos */
+    footer {
+        display: flex;
+        flex-wrap: nowrap;
+        scale: 25%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    footer > a:first-child {
+        content: url(/imgs/html5-removebg-preview.png);
+        scale: 80%;
+    }
+    footer > a:nth-child(2) {
+    content: url(/imgs/css-removebg-preview.png);
+    }
+    footer > a:nth-child(3) {
+        content: url(/imgs/cc-removebg-preview.png);
+    }
+    footer > a:nth-child(4) {
+        content: url(imgs/accessability-removebg-preview.png);
+        scale: 120%;
+    }
+    footer > a:last-child {
+        content: url(/imgs/github-removebg-preview.png);
+        scale: 150%;
+    }
