@@ -26,7 +26,7 @@
     transition-timing-function: ease;
     text-align: center;
     }
-    .sidebar {
+    aside.sidebar {
     background: linear-gradient(90deg, #4B93B4 0%, #4B65B4 33%, #6A5F79 56%, #A5919D 100%);
     flex-direction: column;
     border-radius: 2em;
@@ -49,7 +49,6 @@
     content: url(/imgs/Earth-rotate.gif);
     display: flex;
     justify-content: center;
-    scale: 80%;
     }
     .intro::before, .benefits::before, .participation::before, .requirements::before, .explanation::before {
     content: url(/imgs/moon-spin-gif.gif);
@@ -97,8 +96,11 @@
     }
     
     /* Texts */
-    p {
+    div p {
     text-align: left;
+    }
+    h3+p {
+        color: orangered;
     }
     p::first-letter {
         font-size: 200%;
@@ -106,30 +108,58 @@
     p::first-line {
         text-decoration: underline;
     }
+    li.view-css {
+        font-size: larger;
+    }
+    a[href] {
+        font-weight: bold;
+    }
+    a[class="design-name"] {
+        font-weight: bold;
+    }
+    footer a {
+        display: flex;
+    }
+
+
     /* Logos */
     footer {
-        display: flex;
-        flex-wrap: nowrap;
-        scale: 25%;
-        justify-content: center;
-        align-items: center;
-
+        resize: 50px;
     }
     footer > a:first-child {
-        content: url(/imgs/html5-removebg-preview.png);
-        scale: 80%;
+    content: url(/imgs/html5-removebg-preview.png);
     }
     footer > a:nth-child(2) {
     content: url(/imgs/css-removebg-preview.png);
     }
     footer > a:nth-child(3) {
-        content: url(/imgs/cc-removebg-preview.png);
+    content: url(/imgs/cc-removebg-preview.png);
     }
     footer > a:nth-child(4) {
-        content: url(imgs/accessability-removebg-preview.png);
-        scale: 120%;
+    content: url(imgs/accessability-removebg-preview.png);
     }
     footer > a:last-child {
-        content: url(/imgs/github-removebg-preview.png);
-        scale: 150%;
+    content: url(/imgs/github-removebg-preview.png);
+    }
+
+    /* Miscellaneous */
+    [title~="validity"] {
+    float: right;
+    }
+    h3.select ~ nav {
+        background-color: darkgrey;
+        width: 500px;
+        border-radius: 2em;
+    }
+    [class|="design"] {
+        color: rgb(0, 45, 97);
+    }
+    [href^="https://"] {
+        background-color: white;
+    }
+    [href$=".com"] {
+        background-color: white;
+    }
+    [href*="mezzoblue"] {
+        background-color: white;
     }
